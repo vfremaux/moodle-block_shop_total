@@ -116,6 +116,14 @@ class block_shop_total extends block_base {
         return $this->content;
     }
 
+    /**
+     * Shop total cannot be hidden by capabilities
+     */
+    function is_empty() {
+        $this->get_content();
+        return(empty($this->content->text) && empty($this->content->footer));
+    }
+
     /*
      * Hide the title bar when none set..
      */
