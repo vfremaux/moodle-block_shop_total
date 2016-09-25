@@ -15,11 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Version details.
  *
  * @package    block_shop_total
  * @category   blocks
- * @copyright  2015 onwards Valery Fremaux (valery.fremaux@gmail.com)
+ * @author      Valery Fremaux <valery.fremaux@gmail.com>
+ * @copyright  2016 onwards Valery Fremaux (valery.fremaux@gmail.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -30,3 +31,6 @@ $plugin->requires  = 2015111000;        // Requires this Moodle version
 $plugin->component = 'block_shop_total'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity = MATURITY_BETA; // Full name of the plugin (used for diagnostics)
 $plugin->release = '3.0.0 (Build 2016022500)'; // Full name of the plugin (used for diagnostics)
+
+// Non moodle attributes.
+$plugin->codeincrement = '3.0.0000';
