@@ -17,10 +17,11 @@
 /**
  * Version details
  *
- * @package    block_shop_total
- * @category   blocks
- * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package     block_shop_total
+ * @category    blocks
+ * @author      Valery Fremaux <valery.fremaux@gmail.com>
+ * @copyright   2016 onwards Valery Fremaux (http://www.mylearningfactory.com)
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
@@ -30,3 +31,6 @@ $plugin->requires  = 2014111000;        // Requires this Moodle version
 $plugin->component = 'block_shop_total'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity = MATURITY_RC; // Full name of the plugin (used for diagnostics)
 $plugin->release = '2.8.0 (Build 2016022500)'; // Full name of the plugin (used for diagnostics)
+
+// Non Moodle attributes.
+$plugin->codeincrement = '2.8.0002';
