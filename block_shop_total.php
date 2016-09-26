@@ -23,10 +23,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once $CFG->dirroot.'/local/shop/lib.php';
-require_once $CFG->dirroot.'/local/shop/locallib.php';
-require_once $CFG->dirroot.'/local/shop/classes/Shop.class.php';
-require_once $CFG->dirroot.'/local/shop/classes/Catalog.class.php';
+require_once($CFG->dirroot.'/local/shop/lib.php');
+require_once($CFG->dirroot.'/local/shop/locallib.php');
+require_once($CFG->dirroot.'/local/shop/classes/Shop.class.php');
+require_once($CFG->dirroot.'/local/shop/classes/Catalog.class.php');
 
 use local_shop\Shop;
 use local_shop\Catalog;
@@ -50,7 +50,7 @@ class block_shop_total extends block_base {
     }
 
     public function get_content() {
-        global $USER, $DB, $COURSE, $OUTPUT, $SESSION;
+        global $OUTPUT, $SESSION;
 
         if ($this->content !== null) {
             return $this->content;
@@ -66,7 +66,7 @@ class block_shop_total extends block_base {
         $units = 0;
 
         if (isset($SESSION->shoppingcart->order)) {
-            foreach($SESSION->shoppingcart->order as $shortname => $q) {
+            foreach ($SESSION->shoppingcart->order as $q) {
                 $units += $q;
             }
         }
