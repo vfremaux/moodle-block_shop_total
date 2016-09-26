@@ -31,6 +31,7 @@ $plugin->requires  = 2015111000;        // Requires this Moodle version
 $plugin->component = 'block_shop_total'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity = MATURITY_BETA; // Full name of the plugin (used for diagnostics)
 $plugin->release = '3.0.0 (Build 2016022500)'; // Full name of the plugin (used for diagnostics)
+$plugin->dependencies = array('local_shop' => 2016092100);
 
 // Non moodle attributes.
 $plugin->codeincrement = '3.0.0000';
