@@ -20,18 +20,18 @@
  * @package     block_shop_total
  * @category    blocks
  * @author      Valery Fremaux <valery.fremaux@gmail.com>
- * @copyright   2016 onwards Valery Fremaux (valery.fremaux@gmail.com)
+ * @copyright   2016 onwards Valery Fremaux (http://www.mylearningfactory.com)
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2016022500;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2015111000;        // Requires this Moodle version.
+$plugin->requires  = 2016051900;        // Requires this Moodle version.
 $plugin->component = 'block_shop_total'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_RC;
-$plugin->release = '3.0.0 (Build 2016022500)';
+$plugin->release = '3.1.0 (Build 2016022500)';
 $plugin->dependencies = array('local_shop' => '*');
 
 // Non moodle attributes.
-$plugin->codeincrement = '3.0.0000';
+$plugin->codeincrement = '3.1.0000';
