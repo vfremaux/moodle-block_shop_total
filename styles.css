@@ -1,4 +1,8 @@
 input.order-detail {
-	width:initial;
+    width:initial;
+}
+
+.block_shop_total {
+    position:fixed;
 }
 
