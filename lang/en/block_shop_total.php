@@ -21,8 +21,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['shop_total:addinstance'] = 'Can add an instance';
-$string['shop_total:myaddinstance'] = 'Can add an instance to My Page';
+$string['shop_total:addinstance'] = 'Add an instance';
+$string['shop_total:myaddinstance'] = 'Add an instance to My Page';
 
 $string['blockname'] = 'Shop total';
 $string['configshopinstance'] = 'Shop';
@@ -35,7 +35,7 @@ $string['startdate'] = 'Start date';
 $string['enddate'] = 'End date';
 $string['product'] = 'Product';
 $string['status'] = 'Status';
-$string['running'] = 'Running';
+$string['running'] = 'Under way';
 $string['available'] = 'Available';
 $string['expiring'] = 'Expiring';
 $string['expired'] = 'Expired';
