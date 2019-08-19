@@ -75,46 +75,29 @@ class block_shop_total extends block_base {
         $renderer->load_context($theshop, $thecatalog, $theblock);
 
         // Order total block.
-
-        $this->content->text = '<a name="total"></a><div id="shop-ordertotals">';
-        $this->content->text .= $renderer->order_totals();
-        $this->content->text .= '</div>';
+        $template = new StdClass;
+        $template->ordertotals = $renderer->order_totals();
 
         // Order item counting block.
-
-        $this->content->text .= $OUTPUT->heading(get_string('order', 'block_shop_total'));
-        $this->content->text .= '<div id="order-detail">';
-        $this->content->text .= $renderer->order_detail($shopproducts);
-        $this->content->text .= '</div>';
+        $template->orderdetail = $renderer->order_detail($shopproducts);
 
         // Print navigation controller in right column.
 
-        $nextstyle = ($units) ? 'opacity:1.0' : 'opacity:0.5';
-        $nextdisabled = ($units) ? '' : 'disabled="disabled"';
-        $overtext = ($units) ? get_string('continue', 'block_shop_total') : get_string('emptyorder', 'block_shop_total');
-
-        if ($view == 'shop') {
-            $shopurl = new moodle_url('/local/shop/front/view.php');
-            $this->content->text .= '<p align="center"><center>';
-            $this->content->text .= '<form name="driverform" action="'.$shopurl.'">';
-            $this->content->text .= '<input type="hidden" name="view" value="shop" />';
-            $this->content->text .= '<input type="hidden" name="shopid" value="'.$theshop->id.'" />';
-            if (!empty($theblock)) {
-                $this->content->text .= '<input type="hidden" name="blockid" value="'.$theblock->instance->id.'" />';
-            }
-            $this->content->text .= '<input type="hidden" name="what" value="navigate" />';
-            $this->content->text .= '<input type="submit"
-                                            id="next-button"
-                                            title="'.$overtext.'"
-                                            name="go" value="'.get_string('next', 'block_shop_total').'"
-                                            onclic="check_empty_order()" '.$nextdisabled.' style="'.$nextstyle.'" />';
-            $this->content->text .= '<input type="button"
-                                            name="clearall"
-                                            value="'.get_string('reset', 'block_shop_total').'"
-                                            onclick="this.form.what.value=\'clearall\';this.form.submit();" />';
-            $this->content->text .= '</form>';
-            $this->content->text .= '</center></p>';
+        $template->nextstyle = ($units) ? 'opacity:1.0' : 'opacity:0.5';
+        $template->nextdisabled = ($units) ? '' : 'disabled="disabled"';
+        $template->overtext = ($units) ? get_string('continue', 'block_shop_total') : get_string('emptyorder', 'block_shop_total');
+        $template->shopid = $theshop->id;
+        if (is_object($theblock)) {
+            $template->blockid = $theblock->instance->id;
         }
+
+        $template->isshopview = false;
+        if ($view == 'shop') {
+            $template->isshopview = true;
+            $template->shopurl = new moodle_url('/local/shop/front/view.php');
+        }
+
+        $this->content->text = $OUTPUT->render_from_template('block_shop_total/cart_total', $template);
 
         $this->content->footer = '';
 
