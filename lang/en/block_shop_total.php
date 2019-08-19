@@ -24,6 +24,9 @@
 $string['shop_total:addinstance'] = 'Add an instance';
 $string['shop_total:myaddinstance'] = 'Add an instance to My Page';
 
+// Privacy.
+$string['privacy:metadata'] = "The Shop Total Block does not directely store any data belonging to users";
+
 $string['blockname'] = 'Shop total';
 $string['configshopinstance'] = 'Shop';
 $string['configtitle'] = 'Title';
