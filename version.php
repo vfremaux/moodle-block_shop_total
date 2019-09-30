@@ -27,11 +27,15 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2016022500;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2018042700;        // Requires this Moodle version.
+$plugin->requires  = 2019051100;        // Requires this Moodle version.
 $plugin->component = 'block_shop_total'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_RC;
-$plugin->release = '3.5.0 (Build 2016022500)';
+$plugin->release = '3.7.0 (Build 2016022500)';
 $plugin->dependencies = array('local_shop' => '*');
 
 // Non moodle attributes.
+<<<<<<< HEAD
 $plugin->codeincrement = '3.5.0000';
+=======
+$plugin->codeincrement = '3.7.0002';
+>>>>>>> MOODLE_37_STABLE
