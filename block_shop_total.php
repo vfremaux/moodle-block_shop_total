@@ -34,15 +34,11 @@ use local_shop\Catalog;
 class block_shop_total extends block_base {
 
     public function init() {
-        $this->title = get_string('blockname', 'block_shop_total');
+        $this->title = get_string('order', 'block_shop_total');
     }
 
     public function applicable_formats() {
         return array('all' => true, 'my' => true, 'course' => true);
-    }
-
-    public function specialization() {
-        return false;
     }
 
     public function instance_allow_multiple() {

@@ -2,6 +2,7 @@
 
 <!-- block_shop_total/cart_total -->
 <a name="total"></a>
+
 <div id="shop-ordertotals">
     {{{ordertotals}}}
 </div>
@@ -20,9 +21,9 @@
 <input type="hidden" name="shopid" value="{{shopid}}" />
 <input type="hidden" name="blockid" value="{{blockid}}" />
 <input type="hidden" name="what" value="navigate" />
-<input type="submit" id="next-button" title="{{overtext}}" name="go" value="{{#str}}next, block_shop_total{{/str}}"
+<input type="submit" class="btn" id="next-button" title="{{overtext}}" name="go" value="{{#str}}next, block_shop_total{{/str}}"
     onclick="check_empty_order()" {{{nextdisabled}}} style="{{{nextstyle}}}" />
-<input type="button" name="clearall" value="{{#str}}reset, block_shop_total{{/str}}" onclick="this.form.what.value=\'clearall\';this.form.submit();" />
+<input type="button" name="clearall" class="btn btn-default" value="{{#str}}reset, block_shop_total{{/str}}" onclick="this.form.what.value='clearall';this.form.submit();" />
 </form>
 </center>
 </p>
