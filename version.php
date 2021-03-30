@@ -34,4 +34,4 @@ $plugin->release = '3.5.0 (Build 2016022500)';
 $plugin->dependencies = array('local_shop' => '*');
 
 // Non moodle attributes.
-$plugin->codeincrement = '3.5.0000';
+$plugin->codeincrement = '3.5.0002';
