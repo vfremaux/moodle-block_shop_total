@@ -3,4 +3,8 @@ input.order-detail {
     width: initial;
 }
 
+.block_shop_total {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
 
