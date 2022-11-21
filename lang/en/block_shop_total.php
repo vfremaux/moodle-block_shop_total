@@ -27,13 +27,13 @@ $string['shop_total:myaddinstance'] = 'Add an instance to My Page';
 // Privacy.
 $string['privacy:metadata'] = "The Shop Total Block does not directely store any data belonging to users";
 
-$string['blockname'] = 'Shop total';
+$string['blockname'] = 'Shop: Purchase Cart';
 $string['configshopinstance'] = 'Shop';
 $string['configtitle'] = 'Title';
 $string['leaveblanktohide'] = 'Leave blank to hide';
 $string['noproducts'] = 'No products in your account';
 $string['notconfigured'] = 'This block is not configured. A shop instance MUST be assigned.';
-$string['pluginname'] = 'My products';
+$string['pluginname'] = 'Shop: Purchase Cart';
 $string['startdate'] = 'Start date';
 $string['enddate'] = 'End date';
 $string['product'] = 'Product';
