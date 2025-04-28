@@ -15,10 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    block_shop_total
- * @category   blocks
- * @copyright  2016 Valery Fremaux
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Lang file.
+ *
+ * @package         block_shop_total
+ * @author          Valery Fremaux (valery.fremaux@gmail.com)
+ * @copyright       2016 onwards Valery Fremaux (valery.fremaux@gmail.com)
+ * @license         http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['shop_total:addinstance'] = 'Add an instance';
@@ -33,6 +35,7 @@ $string['configtitle'] = 'Title';
 $string['leaveblanktohide'] = 'Leave blank to hide';
 $string['noproducts'] = 'No products in your account';
 $string['notconfigured'] = 'This block is not configured. A shop instance MUST be assigned.';
+$string['ordertotal'] = 'Order total';
 $string['pluginname'] = 'Shop: Purchase Cart';
 $string['startdate'] = 'Start date';
 $string['enddate'] = 'End date';

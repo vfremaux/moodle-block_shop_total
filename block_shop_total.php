@@ -15,9 +15,11 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Main block class
+ *
  * @package    block_shop_total
- * @category   blocks
- * @copyright  2016 Valery Fremaux
+ * @author      Valery Fremaux <valery.fremaux@gmail.com>
+ * @copyright   2016 onwards Valery Fremaux (http://www.activeprolearn.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -31,20 +33,37 @@ require_once($CFG->dirroot.'/local/shop/classes/Catalog.class.php');
 use local_shop\Shop;
 use local_shop\Catalog;
 
+/**
+ * A block that displays the shopping cart summary
+ */
 class block_shop_total extends block_base {
 
+    /**
+     * Standard block init
+     */
     public function init() {
         $this->title = get_string('order', 'block_shop_total');
     }
 
+    /**
+     * Applicable formats
+     */
     public function applicable_formats() {
-        return array('all' => true, 'my' => true, 'course' => true);
+        return ['all' => true, 'my' => true, 'course' => true];
     }
 
+    /**
+     * Can we put several instances ?
+     * this is possible when several shop instances are used.
+     * Also this might lead to a confuse situation.
+     */
     public function instance_allow_multiple() {
         return true;
     }
 
+    /**
+     * Main content
+     */
     public function get_content() {
         global $OUTPUT, $SESSION;
 
@@ -71,7 +90,7 @@ class block_shop_total extends block_base {
         $renderer->load_context($theshop, $thecatalog, $theblock);
 
         // Order total block.
-        $template = new StdClass;
+        $template = new StdClass();
         $template->ordertotals = $renderer->order_totals();
 
         // Order item counting block.

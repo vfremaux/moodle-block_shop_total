@@ -3,4 +3,8 @@ input.order-detail {
     width: initial;
 }
 
+input.local-shop-order-detail {
+    padding-left: 4px;
+    padding-right: 4px;
+}
 
